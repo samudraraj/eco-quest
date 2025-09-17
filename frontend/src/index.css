@@ -1,0 +1,44 @@
+/* Replace the current :root block with this one in src/index.css */
+:root {
+  /* The Original Green-Yellow Palette */
+  --green-yellow-50: #faffe5;
+  --green-yellow-100: #f2ffc7;
+  --green-yellow-200: #e2ff95;
+  --green-yellow-300: #ccff57;
+  --green-yellow-400: #aff517;
+  --green-yellow-500: #95dc06;
+  --green-yellow-600: #72b000;
+  --green-yellow-700: #568605;
+  --green-yellow-800: #46690b;
+  --green-yellow-900: #3b590e;
+  --green-yellow-950: #1d3201; 
+  --color-surface-rgb: 70, 105, 11;
+
+  /* --- SEMANTIC THEME COLORS (ULTRA-DARK GREEN-YELLOW) --- */
+  
+  /* Background Colors */
+  --color-background: var(--green-yellow-950); /* CHANGED to the darkest shade */
+  --color-surface: var(--green-yellow-800);    /* This will still stand out nicely */
+
+  /* Text Colors */
+  --color-text-primary: var(--green-yellow-100);
+  --color-text-secondary: var(--green-yellow-200);
+
+  /* Accent & Button Colors */
+  --color-primary: var(--green-yellow-400);
+  --color-primary-hover: var(--green-yellow-300);
+
+  /* Feedback Colors */
+  --color-correct-bg: var(--green-yellow-700);
+  --color-correct-border: var(--green-yellow-400);
+  --color-correct-text: var(--green-yellow-50);
+  
+  /* Error color for the dark theme */
+  --color-error-bg: #58181F;
+  --color-error-border: #f5c6cb;
+  --color-error-text: #f8d7da;
+}
+
+body {
+  background-color: var(--color-background); /* This should be our dark color */
+}

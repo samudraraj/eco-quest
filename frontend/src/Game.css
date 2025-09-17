@@ -1,0 +1,92 @@
+/* Updated frontend/src/Game.css */
+.quiz-container {
+  background-color: var(--color-surface);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 700px;
+  text-align: center;
+  border: 1px solid var(--green-yellow-200);
+}
+
+.question-text {
+  margin-bottom: 2rem;
+  color: var(--color-text-primary);
+}
+
+.answer-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.btn-answer {
+  background-color: var(--color-surface);
+  border: 2px solid var(--green-yellow-200);
+  padding: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.2s ease-in-out;
+  text-align: left;
+  color: var(--color-text-secondary);
+}
+
+.btn-answer:hover:not(:disabled) {
+  background-color: var(--green-yellow-100);
+  border-color: var(--color-primary);
+}
+
+.btn-answer:disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.btn-answer.correct {
+  background-color: var(--color-correct-bg);
+  border-color: var(--color-correct-border);
+  color: var(--color-correct-text);
+  font-weight: bold;
+}
+
+.btn-answer.incorrect {
+  background-color: var(--color-error-bg);
+  border-color: var(--color-error-border);
+  color: var(--color-error-text);
+}
+
+.feedback-section {
+  margin-top: 2rem;
+}
+
+.feedback-section button {
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  background-color: var(--color-primary);
+  color: #ffffff; /* White text on the primary color works well */
+  border-radius: 5px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.feedback-section button:hover {
+  background-color: var(--color-primary-hover);
+}
+
+.feedback-correct { 
+  color: var(--color-correct-text); 
+  font-weight: bold; 
+}
+.feedback-incorrect { 
+  color: var(--color-error-text); 
+  font-weight: bold; 
+}
+
+.hud {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  color: var(--color-text-secondary);
+}

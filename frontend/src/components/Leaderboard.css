@@ -1,0 +1,65 @@
+/* frontend/src/components/Leaderboard.css */
+.leaderboard-container {
+    width: 100%;
+    max-width: 900px;
+    margin-top: 2rem;
+}
+
+.leaderboard-table {
+    width: 100%;
+    border-collapse: collapse;
+    color: var(--color-text-primary);
+}
+
+.leaderboard-table th,
+.leaderboard-table td {
+    padding: 1rem 1.5rem;
+    text-align: left;
+}
+
+.leaderboard-table thead {
+    background-color: var(--green-yellow-900);
+}
+
+.leaderboard-table th {
+    font-size: 1.1rem;
+    color: var(--green-yellow-300);
+    border-bottom: 2px solid var(--green-yellow-600);
+}
+
+.leaderboard-table tbody tr {
+    border-bottom: 1px solid var(--green-yellow-700);
+    transition: background-color 0.2s;
+}
+
+.leaderboard-table tbody tr:last-child {
+    border-bottom: none;
+}
+
+.leaderboard-table tbody tr:hover {
+    background-color: var(--green-yellow-700);
+}
+
+.rank-cell {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--color-primary);
+}
+
+.player-cell {
+    font-weight: 500;
+}
+
+/* Special styles for top 3 */
+.rank-1 .rank-cell {
+    color: #FFD700; /* Gold */
+    text-shadow: 0 0 5px #FFD700;
+}
+.rank-2 .rank-cell {
+    color: #C0C0C0; /* Silver */
+    text-shadow: 0 0 5px #C0C0C0;
+}
+.rank-3 .rank-cell {
+    color: #CD7F32; /* Bronze */
+    text-shadow: 0 0 5px #CD7F32;
+}
