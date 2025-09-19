@@ -83,7 +83,7 @@ function App() {
       <main className="main-content">
         <Routes>
           {/* The Dashboard now receives the profile to display stats */}
-          <Route path="/" element={user ? <Dashboard user={user} profile={profile} /> : <Login />} />
+           <Route path="/" element={user ? <Dashboard user={user} profile={profile} setProfile={setProfile} /> : <Login />} />
           <Route path="/quiz" element={user ? <Game user={user} /> : <Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />

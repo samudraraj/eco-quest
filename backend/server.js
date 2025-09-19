@@ -30,6 +30,9 @@ app.use('/api/profile', profileRoutes);
 const leaderboardRoutes = require('./routes/leaderboard');
 app.use('/api/leaderboard', leaderboardRoutes);
 
+const communityEventRoutes = require('./routes/communityEvents');
+app.use('/api/community-events', communityEventRoutes);
+
 // --- Start the server ---
 app.listen(PORT, () => {
     console.log(`Server is running on port: ${PORT}`);

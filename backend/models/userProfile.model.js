@@ -5,16 +5,19 @@ const Schema = mongoose.Schema;
 const userProfileSchema = new Schema({
     firebaseUid: { type: String, required: true, unique: true },
     email: { type: String, required: true, unique: true },
-    // ADD THIS FIELD
     role: {
         type: String,
         required: true,
-        enum: ['student', 'teacher'], // Role must be one of these
-        default: 'student' // Default role for new users
+        enum: ['student', 'teacher'],
+        default: 'student'
     },
     xp: { type: Number, default: 0 },
     rank: { type: Number, default: 0 },
     badges: [{ type: String }],
+    // --- NEW FIELDS ---
+    coins: { type: Number, default: 0 }, // New: for a virtual currency
+    completedEvents: [{ type: mongoose.Schema.Types.ObjectId, ref: 'CommunityEvent' }], // New: to track completed events
+    achievements: [{ type: String }], // New: to track specific achievements unlocked
 }, {
     timestamps: true,
 });

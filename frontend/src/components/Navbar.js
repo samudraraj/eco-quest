@@ -27,6 +27,7 @@ const Navbar = ({ user, profile }) => { // Receive both user and profile as prop
                 {user ? (
                     // If a user is logged in...
                     <>
+                        <Link to="/" className="nav-link">Dashboard</Link>
                         <Link to="/leaderboard" className="nav-link">Leaderboard</Link>
                         <Link to="/quiz" className="nav-link">Quiz</Link>
 
