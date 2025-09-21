@@ -33,7 +33,7 @@ const Register = () => {
             const token = await user.getIdToken();
 
             // 3. Call our backend to create the user profile with the selected role
-            const profileResponse = await fetch(`http://${process.env.REACT_APP_API_URL}/api/profile/create`, {
+            const profileResponse = await fetch(`${process.env.REACT_APP_API_URL}/api/profile/create`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

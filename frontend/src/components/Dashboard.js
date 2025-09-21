@@ -10,7 +10,7 @@ const Dashboard = ({ user, profile, setProfile }) => { // We'll need setProfile 
     useEffect(() => {
         const fetchEvents = async () => {
             try {
-                const response = await fetch(`http://${process.env.REACT_APP_API_URL}/api/community-events`);
+                const response = await fetch(`${process.env.REACT_APP_API_URL}/api/community-events`);
                 if (!response.ok) {
                     throw new Error('Failed to fetch community events');
                 }
@@ -31,7 +31,7 @@ const Dashboard = ({ user, profile, setProfile }) => { // We'll need setProfile 
 
         try {
             const token = await user.getIdToken();
-            const response = await fetch(`http://${process.env.REACT_APP_API_URL}/api/community-events/complete/${eventId}`, {
+            const response = await fetch(`${process.env.REACT_APP_API_URL}/api/community-events/complete/${eventId}`, {
                 method: 'POST',
                 headers: {
                     'Authorization': `Bearer ${token}`,
