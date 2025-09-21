@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import { onAuthStateChanged } from 'firebase/auth';
 import { auth } from './firebase';
 
+import backgroundVideo from './rainforest-bg.mp4'; 
 // Import all necessary components
 import Dashboard from './components/Dashboard';
 import Navbar from './components/Navbar';
@@ -78,6 +79,10 @@ function App() {
 
   return (
     <div className="App">
+    <video autoPlay loop muted playsInline className="background-video">
+        <source src={backgroundVideo} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
       {/* Pass both the Firebase user and our DB profile to the Navbar */}
       <Navbar user={user} profile={profile} />
       <main className="main-content">

@@ -38,19 +38,27 @@
     font-size: 1rem;
 }
 .btn-primary {
-    width: 100%;
-    padding: 0.8rem 1.5rem;
-    font-size: 1rem;
-    cursor: pointer;
-    border: none;
-    background-color: var(--color-primary);
-    color: var(--color-text-primary);
-    border-radius: 5px;
-    transition: background-color 0.2s ease-in-out;
-    font-weight: bold;
+  width: 100%;
+  padding: 0.8rem 1.5rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.2s ease-in-out;
+  font-weight: bold;
+  
+  /* --- UPDATED/NEW LINES --- */
+  font-size: 1.1rem; /* Increase the font size */
+  display: flex;         /* Use Flexbox for alignment */
+  justify-content: center; /* Center horizontally */
+  align-items: center;     /* Center vertically */
+  
+  /* Use our theme variables */
+  background-color: var(--color-primary);
+  color: var(--color-primary-text);
 }
+
 .btn-primary:hover {
-    background-color: var(--color-primary-hover);
+  background-color: var(--color-primary-hover);
 }
 .error-message {
     color: var(--color-error-text);

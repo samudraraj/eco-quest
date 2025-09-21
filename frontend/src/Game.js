@@ -115,7 +115,6 @@ function Game({ user }) {
     if (error) return <div>Error: {error}</div>;
     if (questions.length === 0) return <div>No questions found in the database. Add some questions to play!</div>;
 
-    // Render this screen when the quiz is over
     if (isQuizFinished) {
         return (
             <div className="quiz-container">
@@ -124,11 +123,12 @@ function Game({ user }) {
                 
                 <p className="submit-message">{submitMessage}</p>
 
-                <div style={{marginTop: '2rem'}}>
-                    <button onClick={handleRestartQuiz} className="btn-secondary" style={{marginRight: '1rem'}}>
+                {/* Use our new container and button classes */}
+                <div className="quiz-actions">
+                    <button onClick={handleRestartQuiz} className="btn-secondary">
                         Play Again
                     </button>
-                    <Link to="/" className="btn-primary" style={{textDecoration: 'none', display: 'inline-block'}}>
+                    <Link to="/" className="btn-primary" style={{textDecoration: 'none'}}>
                         Back to Dashboard
                     </Link>
                 </div>
