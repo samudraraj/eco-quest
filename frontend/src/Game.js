@@ -24,7 +24,7 @@ function Game({ user }) {
     useEffect(() => {
         const fetchQuestions = async () => {
             try {
-                const response = await fetch('http://localhost:5001/api/questions');
+                const response = await fetch('http://${process.env.REACT_APP_API_URL}/api/questions');
                 if (!response.ok) throw new Error('Network response was not ok');
                 const data = await response.json();
                 // Let's just use 5 questions for a shorter quiz to make testing faster
@@ -48,7 +48,7 @@ function Game({ user }) {
 
             try {
                 const token = await user.getIdToken();
-                const response = await fetch('http://localhost:5001/api/profile/quiz/complete', {
+                const response = await fetch('http://${process.env.REACT_APP_API_URL}/api/profile/quiz/complete', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -125,7 +125,7 @@ function Game({ user }) {
 
                 {/* Use our new container and button classes */}
                 <div className="quiz-actions">
-                    <button onClick={handleRestartQuiz} className="btn-secondary">
+                    <button onClick={handleRestartQuiz} className="btn-secondary" disabled={isSubmitting}>
                         Play Again
                     </button>
                     <Link to="/" className="btn-primary" style={{textDecoration: 'none'}}>

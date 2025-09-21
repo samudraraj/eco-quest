@@ -20,7 +20,7 @@ const Navbar = ({ user, profile }) => { // Receive both user and profile as prop
     return (
         <nav className="navbar">
             <Link to="/" className="navbar-brand">
-                <img src="/favicon.ico" className="navbar-logo" />
+                <img src="/favicon.ico" alt="EcoQuest Logo" className="navbar-logo" />
                 EcoQuest
             </Link>
             <div className="nav-links">
