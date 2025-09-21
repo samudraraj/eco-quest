@@ -36,7 +36,7 @@ function App() {
       if (currentUser) {
         try {
           const token = await currentUser.getIdToken();
-          const response = await fetch('http://localhost:5001/api/profile', {
+          const response = await fetch(`http://${process.env.REACT_APP_API_URL}/api/profile`, {
             headers: { 'Authorization': `Bearer ${token}` }
           });
 

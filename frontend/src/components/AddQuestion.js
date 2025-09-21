@@ -58,7 +58,7 @@ const AddQuestion = () => {
 
         try {
             const token = await auth.currentUser.getIdToken();
-            const response = await fetch('http://localhost:5001/api/questions/add', {
+            const response = await fetch(`http://${process.env.REACT_APP_API_URL}/api/questions/add`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
