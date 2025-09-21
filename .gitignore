@@ -9,7 +9,7 @@
 
 # Secret Files - DO NOT COMMIT THESE
 .env
-/frontend/.env.local
+/frontend/.env
 /backend/.env
 serviceAccountKey.json
 
